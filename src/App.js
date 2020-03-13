@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./styles.css";
+import "./styles.scss";
 import GraphContainer from "./components/GraphContainer";
+import Header from "./components/Header/Header";
 export default function App() {
   const [data, setData] = useState({});
   useEffect(() => {
@@ -14,8 +15,9 @@ export default function App() {
   }, []);
   return (
     <div className="App">
-      <h1>pantaucorona</h1>
-      <GraphContainer data={data} />
+      <Header />
+      <main><GraphContainer data={data} /></main>
+
     </div>
   );
 }
