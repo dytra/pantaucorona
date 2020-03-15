@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+.alert {
+  display:flex;
+  justify-content:center;
+  padding:1em .5em;
+  box-sizing:border-box;
+  text-align: center;
+  width:100%;
+  background:$blue-light;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: -.5em;
+  border-bottom:1px solid $blue;
+  color: $blue;
+}

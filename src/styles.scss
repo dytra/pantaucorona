@@ -22,13 +22,28 @@ html,body {
   padding:.85em 1.5em;
   background:white;
   box-sizing: border-box;
+  &.card-full {
+    padding:0 0 1.5em 0;
+  }
   .card-title {
     width:100%;
     text-align:left;
+    padding-left:1.25em;
+    padding-top:1em;
+    padding-right:1em;
+    display:flex;
+    box-sizing: border-box;
+    align-items:center;
     h2 {
-      font-weight: normal;
-      font-size: 1rem;
+      font-weight: 300;
+      cursor:default;
+      font-size: 1.85rem;
       color:#bd4494;
+      flex:1;
+      display:inline;
+    }
+    select {
+      flex:2;
     }
   }
 }
@@ -37,4 +52,14 @@ main {
   width:100%;
   max-width:560px;
   background:white;
+  transform:translateY(-3.3em);
+  border-radius:10px;
+}
+
+.country-select {
+  background:white;
+  height:2.85em;
+  // border-radius:50px;
+  
+  // display:none;
 }
