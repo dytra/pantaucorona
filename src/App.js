@@ -6,7 +6,7 @@ import Updates from "./components/Updates";
 import "./utils.scss";
 export default function App() {
   const [data, setData] = useState({});
-  const BACKEND_URL=process.env.REACT_APP_BACKEND_URL;
+  const BACKEND_URL="https://covid19.mathdro.id";
   useEffect(() => {
     async function start() {
       const fire = await fetch(`${BACKEND_URL}/api/`);
