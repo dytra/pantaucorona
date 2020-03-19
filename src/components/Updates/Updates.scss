@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+ul#updates-list {
+  list-style:none;
+  margin-top:.5em;
+  li {
+    display:flex;
+    // background:yellow;
+    margin-bottom:1em;
+    cursor:default;
+    border-bottom:.5px solid lighten($border,3%);
+    padding-bottom:1em;
+
+    aside.update-list-item--icon {
+      // flex:1;
+      margin-right:.5em;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+    }
+    aside.update-list-item--info {
+      // flex:10;
+      display:flex;
+      flex-direction:column;
+    }
+
+    div.update-list-item--detail {
+      
+      p {
+        color:$black;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.update-list-item--date {
+  // display:none;
+  font-size: .85rem;
+  font-weight: 300;
+}
+.update-list-item--numbers {
+  display:flex;
+  flex-wrap:wrap;
+  // margin-bottom:.5em;
+  span {
+    margin-right:.5em;
+  }
+}

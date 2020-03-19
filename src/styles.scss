@@ -46,6 +46,11 @@ html,body {
       flex:2;
     }
   }
+
+  .card-body {
+    padding-left:1.25em;
+    padding-right:1.25em;
+  }
 }
 
 main {
@@ -62,4 +67,10 @@ main {
   // border-radius:50px;
   
   // display:none;
+}
+
+hr {
+  margin-right:1.25em;
+  margin-left:1.25em;
+  border:.5px solid lighten($border,3%);
 }
