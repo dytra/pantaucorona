@@ -1,4 +1,4 @@
 # pantaucorona
 pantau virus corona dunia
 
-![](https://i.imgur.com/HzzhDdf.png)
+![](https://i.imgur.com/SCyCqTL.png)
