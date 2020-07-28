@@ -3,27 +3,38 @@
   // background: #f7f7f7;
   // padding: 1em 3em;
   border-radius: 5px;
-  
-  display:flex;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   #main-graph {
     margin-bottom: 1.5em;
   }
+  #last-update {
+    // padding-left: 1em;
+    // padding-right: 1em;
+    p {
+      text-align: center;
+      color: rgb(148, 147, 147);
+      font-size: 0.85rem;
+      cursor: default;
+    }
+    margin-bottom: 0.5em;
+  }
   #graph-legend {
-    display:flex;
+    display: flex;
     justify-content: center;
-    
+
     .legend-item {
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
-      margin:0 .5em;
+      margin: 0 0.5em;
       &.confirmed {
         .legend-label {
-          color:rgb(218, 186, 8);
+          color: rgb(218, 186, 8);
         }
       }
       &.recovered {
@@ -31,21 +42,20 @@
           color: rgb(70, 231, 56);
         }
       }
-  
+
       &.deaths {
         .legend-label {
-          color:red;
+          color: red;
         }
       }
       .legend-count {
         font-size: 1.25rem;
-        text-align:center;
+        text-align: center;
         // font-weight: bold;
       }
       .legend-label {
-        font-size: .85rem;
+        font-size: 0.85rem;
       }
     }
   }
 }
-

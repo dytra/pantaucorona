@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, } from "react";
 import "./GraphContainer.scss";
 import Chart from "chart.js";
-import Alert from "../Alert/Alert";
-const GraphContainer = ({ data }) => {
-  const { confirmed, recovered, deaths } = data;
+import { format } from "date-fns";
+// import Alert from "../Alert/Alert";
+const GraphContainer = ({ data, handleChangeCountry, country }) => {
+  const { confirmed, recovered, deaths, lastUpdate } = data;
 
   useEffect(() => {
     if (recovered) {
@@ -42,9 +43,13 @@ const GraphContainer = ({ data }) => {
       <div className="card-title">
         <h2>Sorotan</h2>
         <aside>
-          <select className="country-select">
-            <option>Seluruh Dunia</option>
-            <option>Indonesia</option>
+          <select className="country-select" onChange={handleChangeCountry} value={country}>
+            <option value="">Pilih Negara</option>
+            <option value="all">Seluruh Dunia</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="usa">USA</option>
+            <option value="japan">Jepang</option>
+            <option value="south korea">Korea Selatan</option>
           </select>
 
         </aside>
@@ -52,6 +57,9 @@ const GraphContainer = ({ data }) => {
       <div className="card-body">
         <div id="main-graph">
           <canvas id="graph" />
+        </div>
+        <div id="last-update">
+          <p>Update terakhir: <span>{format(new Date(lastUpdate || new Date()), 'dd MMM yyyy')}</span></p>
         </div>
         <div id="graph-legend">
           <div className="legend-item recovered">
