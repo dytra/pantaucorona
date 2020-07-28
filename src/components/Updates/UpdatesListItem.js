@@ -7,7 +7,7 @@ const UpdatesListItem = ({ update }) => {
       <em className="update-list-item--date">{update.reportDateString}</em>
       <div className="update-list-item--numbers">
         <span className="color-warning"><i className="fas fa-radiation-alt"></i> Terkonfirmasi : {update.totalConfirmed?.toLocaleString('id')}</span><span className="color-success"> <i className="fas fa-heartbeat"></i> Sembuh: {update.totalRecovered?.toLocaleString('id')}</span></div>
-      <div className="update-list-item--detail"><p>Total kasus di China : {update.mainlandChina}. Total kasus selain di China : {update.otherLocations}</p></div>
+      <div className="update-list-item--detail"><p>Total kasus di China : {update.mainlandChina?.toLocaleString('id')}. Total kasus selain di China : {update.otherLocations?.toLocaleString('id')}</p></div>
     </aside>
   </li></React.Fragment>)
 }
