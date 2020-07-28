@@ -11,7 +11,7 @@ const UpdatesListItem = ({ update }) => {
       <div className="update-list-item--numbers">
         <span className="color-warning"><i className="fas fa-radiation-alt"></i> Terkonfirmasi : {update.totalConfirmed?.toLocaleString('id')}</span>
         <span className="color-success"> <i className="fas fa-heartbeat"></i> Sembuh: {update.totalRecovered?.toLocaleString('id')}</span>
-        <span className="color-danger"> <i className="fas fa-skull"></i> Meninggal: {update.totalRecovered?.toLocaleString('id')}</span>
+        <span className="color-danger"> <i className="fas fa-skull"></i> Meninggal: {update.deaths?.total?.toLocaleString('id')}</span>
       </div>
 
       <div className="update-list-item--detail"><p>Total kasus di China : {update.mainlandChina?.toLocaleString('id')}. Total kasus selain di China : {update.otherLocations?.toLocaleString('id')}</p></div>
